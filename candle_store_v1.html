@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Candle & Lighter Store</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .container {
+            background-color: white;
+            border-radius: 20px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            max-width: 900px;
+            width: 100%;
+            text-align: center;
+        }
+        
+        h1 {
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 2.5rem;
+        }
+        
+        .subtitle {
+            color: #666;
+            margin-bottom: 40px;
+            font-size: 1.2rem;
+        }
+        
+        .products {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 50px;
+        }
+        
+        .product {
+            width: 250px;
+            padding: 20px;
+            border-radius: 15px;
+            background: white;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease;
+        }
+        
+        .product:hover {
+            transform: translateY(-10px);
+        }
+        
+        .product-image {
+            width: 180px;
+            height: 180px;
+            margin: 0 auto 20px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 80px;
+        }
+        
+        .candle {
+            background: linear-gradient(45deg, #f0f0f0, #e0e0e0);
+            color: #fff;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .candle::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 20%;
+            background: linear-gradient(90deg, #8B4513, #A0522D);
+            bottom: 0;
+            left: 0;
+            border-radius: 0 0 10px 10px;
+        }
+        
+        .candle::after {
+            content: "";
+            position: absolute;
+            width: 10%;
+            height: 100%;
+            background: #8B4513;
+            left: 20%;
+            border-radius: 5px;
+        }
+        
+        .lighter {
+            background: linear-gradient(45deg, #E0E0E0, #B0B0B0);
+            color: #C00;
+        }
+        
+        .product-name {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        
+        .product-price {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #2E8B57;
+            padding: 8px 15px;
+            background-color: #F0FFF0;
+            border-radius: 20px;
+            display: inline-block;
+        }
+        
+        .footer {
+            margin-top: 40px;
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            .products {
+                gap: 30px;
+            }
+            
+            .product {
+                width: 220px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .products {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .product {
+                width: 100%;
+                max-width: 280px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Amity Hostel Candle Store</h1>
+        <p class="subtitle">Quality products Available 24X7 at affordable prices</p>
+        
+        <div class="products">
+            <div class="product">
+                <div class="product-image candle">🚬</div>
+                <h2 class="product-name">Candle</h2>
+                <div class="product-price">9am to 11:59pm 20 rupees<br>12am to 8:59am 25 rupees</div>
+            </div>
+            
+            <div class="product">
+                <div class="product-image lighter">
+                    🔥
+                </div>
+                <h2 class="product-name">Lighter</h2>
+                <div class="product-price">1 rupee per use.<br>15 rupee deposit(refundable after returning).</div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>Prices may vary according to availability of products but always affordable.<br>Contact shared only through old customers.<br> Sold only to trusted and verified customers.<br>Visit us for more affordable products!<br>Founded and run by AHOCS</p>
+        </div>
+    </div>
+</body>
+</html>
